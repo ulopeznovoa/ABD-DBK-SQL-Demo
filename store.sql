@@ -36,19 +36,37 @@ CREATE TABLE sale (
   FOREIGN KEY (product_id) REFERENCES product(product_id)
 );
 
-INSERT INTO customer VALUES
-(1,'John','Doe','john@example.com','555-1111'),
-(2,'Jane','Smith','jane@example.com','555-2222');
+INSERT INTO customer (customer_id, first_name, last_name, email, phone) VALUES
+  (1,'John','Doe','john@example.com','555-1111'),
+  (2,'Jane','Smith','jane@example.com','555-2222'),
+  (3,'Ane','Agirre','ane.agirre@example.com','555-3333'),
+  (4,'Mikel','Etxebarria','mikel.etx@example.com','555-4444'),
+  (5,'Laura','García','laura.garcia@example.com','555-5555'),
+  (6,'Pedro','Ruiz','pedro.ruiz@example.com','555-6666');
 
-INSERT INTO employee VALUES
-(1,'Alice','Brown','Salesperson'),
-(2,'Bob','Wilson','Manager');
+INSERT INTO employee (employee_id, first_name, last_name, position) VALUES
+  (1,'Alice','Brown','Salesperson'),
+  (2,'Bob','Wilson','Manager'),
+  (3,'Carol','Lopez','Salesperson'),
+  (4,'David','Nguyen','Salesperson'),
+  (5,'Eva','Martinez','Cashier'),
+  (6,'Frank','Connor','Warehouse');
 
-INSERT INTO product VALUES
-(1,'Laptop',999.99),
-(2,'Smartphone',699.50),
-(3,'Headphones',49.90);
+INSERT INTO product (product_id, name, price) VALUES
+  (1,'Laptop',999.99),
+  (2,'Smartphone',699.50),
+  (3,'Headphones',49.90),
+  (4,'Tablet',399.00),
+  (5,'Smartwatch',199.99),
+  (6,'Keyboard',29.95),
+  (7,'Mouse',24.50),
+  (8,'Monitor 24"',149.00),
+  (9,'External SSD 1TB',119.00);
 
-INSERT INTO sale VALUES
-(1,1,1,1,1,'2026-01-20'),
-(2,2,2,3,2,'2026-01-21');
+INSERT INTO sale (sale_id, customer_id, employee_id, product_id, quantity, sale_date) VALUES
+  (1,1,1,1,1,'2026-01-20'),
+  (2,2,2,3,2,'2026-01-21'),
+  (3,3,3,2,1,'2026-01-25'),
+  (4,4,4,5,1,'2026-01-28'),
+  (5,5,2,4,2,'2026-02-02'),
+  (6,6,5,7,3,'2026-02-05');
