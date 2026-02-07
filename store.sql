@@ -41,7 +41,7 @@ INSERT INTO customer (customer_id, first_name, last_name, email, phone) VALUES
   (2,'Jane','Smith','jane@example.com','555-2222'),
   (3,'Ane','Agirre','ane.agirre@example.com','555-3333'),
   (4,'Mikel','Etxebarria','mikel.etx@example.com','555-4444'),
-  (5,'Laura','García','laura.garcia@example.com','555-5555'),
+  (5,'Laura','García','laura.garcia@another.com','555-5555'),
   (6,'Pedro','Ruiz','pedro.ruiz@example.com','555-6666');
 
 INSERT INTO employee (employee_id, first_name, last_name, position) VALUES
