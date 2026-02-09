@@ -10,11 +10,11 @@ CREATE TABLE places (
 );
 
 INSERT INTO places VALUES
-  (1,'Guggenheim Bilbao Museum',    ST_SRID(POINT(-2.9339,43.2686),4326)),
-  (2,'Bilboko Arte Ederren Museoa', ST_SRID(POINT(-2.9378,43.2658),4326)),
-  (3,'Abando Train Station',        ST_SRID(POINT(-2.9280,43.2602),4326)),
-  (4,'Basurtuko Hospitalea',        ST_SRID(POINT(-2.9532,43.2613),4326)),
-  (5,'Azkuna Zentroa',              ST_SRID(POINT(-2.9368,43.2598),4326));
+  (1,'Guggenheim Bilbao Museum',    ST_SRID(POINT(43.2686,-2.9339),4326)),
+  (2,'Bilboko Arte Ederren Museoa', ST_SRID(POINT(43.2658,-2.9378),4326)),
+  (3,'Abando Train Station',        ST_SRID(POINT(43.2602,-2.9280),4326)),
+  (4,'Basurtuko Hospitalea',        ST_SRID(POINT(43.2613,-2.9532),4326)),
+  (5,'Azkuna Zentroa',              ST_SRID(POINT(43.2598,-2.9368),4326));
 
 SET @poly = ST_GeomFromText(
   'POLYGON((
@@ -26,3 +26,5 @@ SET @poly = ST_GeomFromText(
   ))',
   4326
 );
+
+SET @moyua = ST_SRID(POINT(43.263004, -2.934958),4326);
